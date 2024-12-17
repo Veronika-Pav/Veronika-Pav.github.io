@@ -95,12 +95,13 @@ function jsCopy() {
     .pipe(gulp.dest("dist/scripts"));
 }
 function copy() {
-  return gulp
-    .src(resources.static, {
-      base: "src"
-    })
-    .pipe(gulp.dest("dist/"));
-}
+    return gulp
+      .src(resources.static, {
+        base: "src",
+        encoding: false
+      })
+      .pipe(gulp.dest("dist/"));
+  }
 function images() {
     return gulp
       .src(resources.images, { encoding: false })
